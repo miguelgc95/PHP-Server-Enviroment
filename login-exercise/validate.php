@@ -7,12 +7,11 @@
 
     if($_POST["username"]==$user && $_POST["password"]==$password){
         $_SESSION["username"] = $user;
-
-        echo "Welcome ".$_SESSION["username"].", you can acces to the panel: ";
-        echo "<a href='panel.php'>Panel</a>";
-    }else {
-        echo "<script>alert('You cannot acces')</script>";
+        
     }
+    $url = 'panel.php';
+    header('Location: '.$url);
+    die();
 
 ?>
 

@@ -2,6 +2,14 @@
 
     session_start();
 
+    $user = "admin";
+
+    if(isset($_SESSION["username"])){
+        $url = 'panel.php';
+        header('Location: '.$url);
+        die();
+    }
+
 ?>
 
 
